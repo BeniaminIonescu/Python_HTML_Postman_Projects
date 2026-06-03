@@ -1,0 +1,15 @@
+<html>
+    <body>
+            <form action="/{{book.id}}/update" method="POST">
+                <label for="title">title:</label><br>
+                <input type="text" id="title" name="title" value = {{book.title}}><br>
+                <label for="author">author: </label><br>
+                <input type="text" id="author" name="author" value = {{book.author}}><br>
+                <label for="price">price:</label><br>
+                <input type="text" id="price" name="price" value = {{book.price}}><br>
+                <label for="language">language: </label><br>
+                <input type="text" id="language" name="language" value = {{book.language}}><br>
+                <input type="submit" value="Submit">
+            </form>
+    </body>
+</html>
