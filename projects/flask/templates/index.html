@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF - 8">
+        <title> Flask_crud </title>
+    </head>
+
+    <body>
+        <h1>MY FAVOURITE BOOKS</h1>
+        <table bgcolor = "red" width = "1800" cellpadding = "30">
+            <tr bgcolor = "green">
+                <th width = "300">id</th>
+                <th width = "300">title</th>
+                <th width = "300">author</th>
+                <th width = "300">price</th>
+                <th width = "300">language</th>
+                <th width = "300">picture</th>
+            </tr>
+            {%for i in data%}
+            <tr bgcolor = "green" align = "center">
+                <td> {{i.id}} </td>
+                <td> {{i.title}} </td>
+                <td> {{i.author}} </td>
+                <td> {{i.price}} </td>
+                <td> {{i.language}} </td>
+                <td><a href="/{{i.id}}/upload"><button>Upload a photo</button></a></td>
+                <td><a href="/{{i.id}}/delete"><button>Delete</button></a></td>
+                <td><a href="/{{i.id}}/update"><button>Update</button></a></td>
+            </tr> 
+            {% endfor %}
+            <a href="/add">Add a book</a>
+    </body>
+</html>
